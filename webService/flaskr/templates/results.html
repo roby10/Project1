@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<h1>Results</h1>
+	<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/results.css') }}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
+	<body>
+	<a href="{{ url_for('homepage') }}">Back to upload</a>
+	<div class="container-fluid">
+		{% for key in dict.keys() %}
+		<div class="row"> 
+			<div class="col-sm bg-light">{{ key }}</div>
+			{% for file_url in dict[key] %}
+				<div class="col-sm bg-light"><img style="height: 150px" src="{{ file_url }}"></div>
+			{% endfor %}
+		</div>
+		<hr/>
+		{% endfor %}
+	</div>
+	</body>
+</html>
+
+

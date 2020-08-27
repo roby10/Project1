@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask App</title>
+        {{ dropzone.load() }}
+        {{ dropzone.style('border: 2px dashed #0087F7; margin: 10%; min-height: 400px;') }}
+        <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/homepage.css') }}">
+    </head>
+    <body>
+        <h1>Hello from Flask!</h1>
+        <h2>Drag and drop up to 32 files below</h2>
+        {{ dropzone.create(action_view='homepage') }}
+    </body>
+</html>

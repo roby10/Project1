@@ -1,0 +1,7 @@
+BeautifulSoup
+requests
+tensorflow
+Flask
+Werkzeug==0.16.0
+flask_dropzone
+flask_uploads
